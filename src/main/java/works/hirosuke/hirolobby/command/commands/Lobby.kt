@@ -58,7 +58,7 @@ object Lobby: Command("lobby") {
     }
 
     override fun onTabComplete(sender: CommandSender, label: String, args: Array<out String>): List<String>? {
-        if (args.size == 1) return listOf("config")
+        if (args.size == 1) return listOf("config", "load")
 
         return when (args[0]) {
             "config" -> {

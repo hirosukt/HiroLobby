@@ -1,0 +1,8 @@
+name: HiroLobby
+version: '1.0.0'
+main: works.hirosuke.hirolobby.HiroLobby
+api-version: 1.18
+prefix: HiroLobby
+authors: [ Hirosuke ]
+description: original plugin for Hiro Club.
+website: hirosuke.works

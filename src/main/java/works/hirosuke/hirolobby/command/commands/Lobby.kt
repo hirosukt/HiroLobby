@@ -52,6 +52,7 @@ object Lobby: Command("lobby") {
                     ConfigManager.getAllInstance().forEach {
                         it.init(false)
                     }
+                    sender.sendPrefixedMessage("config has loaded.")
                 }
             }
         }
@@ -67,7 +68,7 @@ object Lobby: Command("lobby") {
                         EnumConfig.values().filter { it != EnumConfig.ALL }.map { it.name.lowercase() }
                     }
                     else -> {
-                        (ConfigManager.getInstanceByName(args[1])?.getKeys(args.toList().minus(args[args.lastIndex]).joinToString(ConfigManager.PATH_SEPARATOR)) ?: emptySet()).toList()
+                        (ConfigManager.getInstanceByName(args[1])?.getKeys(args.toList().joinToString(ConfigManager.PATH_SEPARATOR)) ?: emptySet()).toList()
                     }
                 }
             }

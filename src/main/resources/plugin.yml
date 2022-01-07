@@ -13,5 +13,8 @@ permissions:
     default: op
     children:
       hirolobby.command.lobby: true
+      hirolobby.command.config: true
   hirolobby.command.lobby:
+    default: op
+  hirolobby.command.config:
     default: op

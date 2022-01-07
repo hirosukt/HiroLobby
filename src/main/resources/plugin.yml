@@ -6,3 +6,12 @@ prefix: HiroLobby
 authors: [ Hirosuke ]
 description: original plugin for Hiro Club.
 website: hirosuke.works
+commands:
+  lobby:
+permissions:
+  hirolobby.command.*:
+    default: op
+    children:
+      hirolobby.command.lobby: true
+  hirolobby.command.lobby:
+    default: op

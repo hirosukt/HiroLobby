@@ -21,6 +21,7 @@ class HiroLobby : JavaPlugin() {
         logger.info("plugin has loaded.")
 
         saveResource("config.yml", false)
+        config.options().copyDefaults(true)
 
         server.pluginManager.registerEvents(BlockEvent(), this)
         server.pluginManager.registerEvents(PlayerEvent(), this)

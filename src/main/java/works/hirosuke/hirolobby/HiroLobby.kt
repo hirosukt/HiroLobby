@@ -6,6 +6,7 @@ import works.hirosuke.hirolobby.event.BlockEvent
 import works.hirosuke.hirolobby.event.EntityEvent
 import works.hirosuke.hirolobby.event.PlayerEvent
 import works.hirosuke.hirolobby.config.ConfigManager
+import works.hirosuke.hirolobby.event.ChatEvent
 
 class HiroLobby : JavaPlugin() {
 
@@ -29,6 +30,7 @@ class HiroLobby : JavaPlugin() {
         }
 
         server.pluginManager.registerEvents(BlockEvent(), this)
+        server.pluginManager.registerEvents(ChatEvent(), this)
         server.pluginManager.registerEvents(PlayerEvent(), this)
         server.pluginManager.registerEvents(EntityEvent(), this)
 

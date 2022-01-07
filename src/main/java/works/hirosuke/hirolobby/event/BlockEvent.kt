@@ -1,4 +1,4 @@
-package works.hirosuke.hirolobby.command.event
+package works.hirosuke.hirolobby.event
 
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener

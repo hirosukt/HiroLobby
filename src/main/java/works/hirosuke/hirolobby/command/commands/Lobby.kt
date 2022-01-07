@@ -47,6 +47,12 @@ object Lobby: Command("lobby") {
                         getConfigWithMessage()
                     }
                 }
+
+                "load" -> {
+                    ConfigManager.getAllInstance().forEach {
+                        it.init(false)
+                    }
+                }
             }
         }
     }

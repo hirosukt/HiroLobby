@@ -1,4 +1,4 @@
-package works.hirosuke.hirolobby.command.event
+package works.hirosuke.hirolobby.event
 
 import org.bukkit.GameMode
 import org.bukkit.entity.Player

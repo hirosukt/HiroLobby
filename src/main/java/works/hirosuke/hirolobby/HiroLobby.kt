@@ -2,9 +2,9 @@ package works.hirosuke.hirolobby
 
 import org.bukkit.plugin.java.JavaPlugin
 import works.hirosuke.hirolobby.command.commands.Lobby
-import works.hirosuke.hirolobby.command.event.BlockEvent
-import works.hirosuke.hirolobby.command.event.EntityEvent
-import works.hirosuke.hirolobby.command.event.PlayerEvent
+import works.hirosuke.hirolobby.event.BlockEvent
+import works.hirosuke.hirolobby.event.EntityEvent
+import works.hirosuke.hirolobby.event.PlayerEvent
 import works.hirosuke.hirolobby.config.ConfigManager
 
 class HiroLobby : JavaPlugin() {

@@ -68,7 +68,7 @@ object Lobby: Command("lobby") {
                         EnumConfig.values().filter { it != EnumConfig.ALL }.map { it.name.lowercase() }
                     }
                     else -> {
-                        (ConfigManager.getInstanceByName(args[1])?.getKeys(args.toList().joinToString(ConfigManager.PATH_SEPARATOR)) ?: emptySet()).toList()
+                        (ConfigManager.getInstanceByName(args[1])?.getKeys(args.toList().minus("config").joinToString(ConfigManager.PATH_SEPARATOR)) ?: emptySet()).toList()
                     }
                 }
             }

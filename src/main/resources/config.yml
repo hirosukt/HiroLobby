@@ -1,3 +1,10 @@
 main:
-  spawnLocation: null
+  spawnLocation:
+    ==: org.bukkit.Location
+    world: world
+    x: 35.5
+    y: 100.0
+    z: 0.0
+    pitch: 90.0
+    yaw: 0.0
   spawnOnJoin: true

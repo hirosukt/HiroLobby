@@ -8,6 +8,9 @@ description: original plugin for Hiro Club.
 website: hirosuke.works
 commands:
   lobby:
+    permission-message: "§cYou don't have permission."
+  config:
+    permission-message: "§cYou don't have permission."
 permissions:
   hirolobby.command.*:
     default: op

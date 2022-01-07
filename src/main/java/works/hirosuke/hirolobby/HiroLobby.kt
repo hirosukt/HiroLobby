@@ -5,6 +5,7 @@ import works.hirosuke.hirolobby.command.commands.Lobby
 import works.hirosuke.hirolobby.command.event.BlockEvent
 import works.hirosuke.hirolobby.command.event.EntityEvent
 import works.hirosuke.hirolobby.command.event.PlayerEvent
+import works.hirosuke.hirolobby.config.ConfigManager
 
 class HiroLobby : JavaPlugin() {
 
@@ -22,6 +23,10 @@ class HiroLobby : JavaPlugin() {
 
         saveResource("config.yml", false)
         config.options().copyDefaults(true)
+
+        ConfigManager.getAllInstance().forEach {
+            it.init(true)
+        }
 
         server.pluginManager.registerEvents(BlockEvent(), this)
         server.pluginManager.registerEvents(PlayerEvent(), this)

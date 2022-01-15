@@ -10,7 +10,7 @@ object ScoreboardUtil {
             player.scoreboard.clearSlot(DisplaySlot.SIDEBAR)
 
             val scoreboard = lobby.server.scoreboardManager?.newScoreboard!!
-            val objective = scoreboard.getObjective("hub") ?: scoreboard.registerNewObjective("hub", "", "   §a§l§n HiroHub ${lobby.description.version.substringBeforeLast(".")} §r   ")
+            val objective = scoreboard.getObjective("hub") ?: scoreboard.registerNewObjective("hub", "", "   §6§l§n HiroHub ${lobby.description.version.substringBeforeLast(".")} §r   ")
             val scores = mutableListOf<String>()
 
             scores.add("")

@@ -2,6 +2,7 @@ package works.hirosuke.hirolobby.event
 
 import org.bukkit.GameMode
 import org.bukkit.Material
+import org.bukkit.Sound
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.FoodLevelChangeEvent
@@ -45,6 +46,10 @@ class PlayerEvent: Listener {
     fun on(e: PlayerInteractEvent) {
         if (e.clickedBlock?.type == Material.CHEST && e.player.gameMode == GameMode.SURVIVAL) {
             e.isCancelled = true
+        }
+        if (e.clickedBlock?.type == Material.HEAVY_WEIGHTED_PRESSURE_PLATE) {
+            e.player.playSound(e.player.location, Sound.ENTITY_WITHER_SHOOT, 0.5f, 1f)
+            e.player.velocity = e.player.velocity.multiply(4).setY(2)
         }
     }
 }

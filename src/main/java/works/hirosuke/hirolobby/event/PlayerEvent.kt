@@ -1,8 +1,11 @@
 package works.hirosuke.hirolobby.event
 
+import org.bukkit.GameMode
+import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.FoodLevelChangeEvent
+import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import works.hirosuke.hirolobby.HiroData
@@ -35,6 +38,13 @@ class PlayerEvent: Listener {
     fun on(e: PlayerQuitEvent) {
         lobby.runTaskLater(1) {
             ScoreboardUtil.update()
+        }
+    }
+
+    @EventHandler
+    fun on(e: PlayerInteractEvent) {
+        if (e.clickedBlock?.type == Material.CHEST && e.player.gameMode == GameMode.SURVIVAL) {
+            e.isCancelled = true
         }
     }
 }

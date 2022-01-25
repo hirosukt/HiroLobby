@@ -44,9 +44,6 @@ class PlayerEvent: Listener {
 
     @EventHandler
     fun on(e: PlayerInteractEvent) {
-        if (e.clickedBlock?.type == Material.CHEST && e.player.gameMode == GameMode.SURVIVAL) {
-            e.isCancelled = true
-        }
         if (e.clickedBlock?.type == Material.HEAVY_WEIGHTED_PRESSURE_PLATE) {
             e.player.playSound(e.player.location, Sound.ENTITY_WITHER_SHOOT, 0.5f, 1f)
             e.player.velocity = e.player.velocity.multiply(4).setY(2)

@@ -46,7 +46,7 @@ class PlayerEvent: Listener {
     fun on(e: PlayerInteractEvent) {
         if (e.clickedBlock?.type == Material.HEAVY_WEIGHTED_PRESSURE_PLATE) {
             e.player.playSound(e.player.location, Sound.ENTITY_WITHER_SHOOT, 0.5f, 1f)
-            e.player.velocity = e.player.velocity.multiply(4).setY(2)
+            e.player.velocity = e.player.velocity.setX(e.player.location.direction.x * 2.5).setY(1).setZ(e.player.location.direction.z * 2.5)
         }
     }
 }
